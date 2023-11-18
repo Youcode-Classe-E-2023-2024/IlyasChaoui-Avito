@@ -11,7 +11,7 @@
 <style>
     h1 {
       color: transparent;
-      background-image: linear-gradient(90deg, rgb(255, 0, 0) 50%, rgb(44, 42, 174) 50%);
+      background-image: linear-gradient(90deg, rgb(0, 0, 0) 50%, rgb(44, 42, 174) 50%);
       background-position: 100%;
       background-size: 200% 100%;
       background-clip: text;
@@ -37,7 +37,7 @@
             <div class="flex items-center my-2 justify-between">
                 <img class="z-1" src="pictures/logo-index.png" alt="" width="100" height="100">
                 <div class="space-x-4 font-black text-2xl ">
-                <h1>WELCOME TO MY WEBSITE OF ADDING ANNONCES OF AVITO</h1>  
+                <h1>WELCOME TO MY WEBSITE OF ADDING ANNONCES IN AVITO</h1>  
                 </div>
                 <a href="CreateTask.php"> <button type="submit" name="submit" class="flex w- justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Create
                         annonce</button>

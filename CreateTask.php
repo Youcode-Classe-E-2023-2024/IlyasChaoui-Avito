@@ -55,8 +55,7 @@ if (isset($_POST['submit'])) {
         } else {
             echo "Error uploading image to the server.";
         }
-    }
-    else {
+    } else {
         // Set the JavaScript code to the variable
 
         $warningScript = '<script>
@@ -92,26 +91,38 @@ if (isset($_POST['submit'])) {
             <div class="flex min-h-full flex-col justify-center items-center px-6 py-12 lg:px-8">
                 <div class="sm:mx-auto sm:w-full sm:max-w-sm">
                     <img class="mx-32 w-32" src="pictures/logo.png" alt="">
-                    <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Créer votre annonce</h2>
+                    <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Créer votre
+                        annonce</h2>
                 </div>
 
                 <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-                    <form class="space-y-6" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
+                    <form class="space-y-6" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST"
+                        enctype="multipart/form-data">
                         <div class="flex flex-col">
                             <div class="w-96 h-28 border-4 rounded-2xl flex flex-col justify-center">
                                 <div class="flex flex-col justify-center items-center">
-                                    <img src="pictures/add.png" alt="add image" width="70" height="70" class="cursor-pointer">
-                                    <input type="file" name="image" id="image" class="border-4 bg-black absolute w-32 mx-12 opacity-0">
+                                    <img src="pictures/add.png" alt="add image" width="70" height="70"
+                                        class="cursor-pointer" id="add">
+                                    <img src="pictures/done.png" alt="image added" width="70" height="70"
+                                        class="cursor-pointer hidden" id="done">
+                                    <input type="file" name="image" id="image"
+                                        class="border-4 bg-black absolute w-32 mx-12 opacity-0">
                                     <p class="font-bold text-white">Cliquer pour importer une image</p>
                                 </div>
                             </div>
-                            <input type="text" name="title" placeholder="Title" required class="p-5 placeholder-white font-bold bg-transparent border-4 border-white my-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                            <input type="number" min=0 name="price" placeholder="Price" required class="p-5 bg-transparent placeholder-white font-bold border-4 border-white my-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                            <input type="text" name="category" placeholder="Category" required class="p-5 bg-transparent placeholder-white font-bold border-4 border-white my-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                            <input type="text" name="description" placeholder="Description" required class="p-5 bg-transparent placeholder-white font-bold border-4 border-white my-3 block w-full h-28 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            <input type="text" name="title" placeholder="Title" required
+                                class="p-5 placeholder-white font-bold bg-transparent border-4 border-white my-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            <input type="number" min=0 name="price" placeholder="Price" required
+                                class="p-5 bg-transparent placeholder-white font-bold border-4 border-white my-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            <input type="text" name="category" placeholder="Category" required
+                                class="p-5 bg-transparent placeholder-white font-bold border-4 border-white my-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            <input type="text" name="description" placeholder="Description" required
+                                class="p-5 bg-transparent placeholder-white font-bold border-4 border-white my-3 block w-full h-28 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         </div>
                         <div>
-                            <button type="submit" name="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Create annonce</button>
+                            <button type="submit" name="submit"
+                                class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Create
+                                annonce</button>
                         </div>
                         <div class="flex justify-center text-blue-700 font-bold underline">
                             <a href="index.php">Go back</a>
